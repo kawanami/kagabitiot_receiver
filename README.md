@@ -1,5 +1,5 @@
 
-> このページを開く [https://kawanami.github.io/kagabitiot_receiver20240630/](https://kawanami.github.io/kagabitiot_receiver20240630/)
+> このページを開く [https://kawanami.github.io/kagabitiot_receiver/](https://kawanami.github.io/kagabitiot_receiver/)
 
 ## 拡張機能として使用
 
