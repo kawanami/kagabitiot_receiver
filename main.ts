@@ -1,7 +1,7 @@
 // 通常着陸
 input.onButtonPressed(Button.A, function () {
-    basic.showArrow(ArrowNames.South)
     serial.writeLine("land")
+    basic.showArrow(ArrowNames.South)
     basic.pause(1000)
 })
 // 2回すると上手くいく。謎。
@@ -24,13 +24,13 @@ radio.onReceivedString(function (receivedString) {
     basic.pause(200)
     basic.clearScreen()
 })
-// Bボタン2をダブルクリック入力でエマージェンシー停止
+// Bボタンをダブルクリック入力でエマージェンシー停止
 input.onButtonPressed(Button.B, function () {
     for (let index = 0; index < 4; index++) {
         basic.pause(100)
         if (input.buttonIsPressed(Button.B)) {
-            basic.showIcon(IconNames.No)
             serial.writeLine("emergency")
+            basic.showIcon(IconNames.No)
             basic.pause(1000)
             break;
         }
@@ -38,13 +38,19 @@ input.onButtonPressed(Button.B, function () {
 })
 let pass = ""
 let ssid = ""
+// 無線グループはこちらで設定
+let radio_group = 101
+// 速度は57600
 serial.redirect(
 SerialPin.P0,
 SerialPin.P1,
 BaudRate.BaudRate57600
 )
-// 送信機（コントローラ）と合わせる
-radio.setGroup(101)
+radio.setGroup(radio_group)
+// デフォルトは7
+radio.setFrequencyBand(radio_group % 83)
+// 受信機なので0とする
+radio.setTransmitPower(0)
 // TelloのSSIDを入れる
 ssid = "TELLO-" + "9A863A"
 pass = ""
