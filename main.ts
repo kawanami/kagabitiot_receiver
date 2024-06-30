@@ -1,3 +1,4 @@
+// 通常着陸
 input.onButtonPressed(Button.A, function () {
     basic.showArrow(ArrowNames.South)
     serial.writeLine("land")
@@ -16,12 +17,14 @@ input.onButtonPressed(Button.AB, function () {
     basic.pause(1000)
     basic.showIcon(IconNames.Yes)
 })
+// RCモード対応のために受信前の表示を削除してレスポンス向上
 radio.onReceivedString(function (receivedString) {
     serial.writeLine(receivedString)
     basic.showIcon(IconNames.Target)
     basic.pause(200)
     basic.clearScreen()
 })
+// Bボタン2をダブルクリック入力でエマージェンシー停止
 input.onButtonPressed(Button.B, function () {
     for (let index = 0; index < 4; index++) {
         basic.pause(100)
@@ -40,7 +43,9 @@ SerialPin.P0,
 SerialPin.P1,
 BaudRate.BaudRate57600
 )
+// 送信機（コントローラ）と合わせる
 radio.setGroup(101)
+// TelloのSSIDを入れる
 ssid = "TELLO-" + "9A863A"
 pass = ""
 basic.showString(ssid.substr(10, 2))
