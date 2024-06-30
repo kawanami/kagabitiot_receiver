@@ -8,7 +8,7 @@
 * [https://makecode.microbit.org/](https://makecode.microbit.org/) を開く
 * **新しいプロジェクト** をクリックしてください
 * ギアボタンメニューの中にある **拡張機能** をクリックしてください
-* **https://github.com/kawanami/kagabitiot_receiver20240630** を検索してインポートします。
+* **https://github.com/kawanami/kagabitiot_receiver** を検索してインポートします。
 
 ## このプロジェクトを編集します
 
