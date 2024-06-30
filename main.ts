@@ -48,7 +48,7 @@ BaudRate.BaudRate57600
 )
 radio.setGroup(radio_group)
 // デフォルトは7
-radio.setFrequencyBand(radio_group % 84)
+radio.setFrequencyBand(radio_group % 83)
 // 受信機なので0とする
 radio.setTransmitPower(0)
 // TelloのSSIDを入れる

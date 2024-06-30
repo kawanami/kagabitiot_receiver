@@ -1,5 +1,5 @@
 {
-    "name": "kagabitIoT_受信側",
+    "name": "kagabitIoT_receiver",
     "description": "",
     "dependencies": {
         "core": "*",
