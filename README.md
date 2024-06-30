@@ -16,7 +16,7 @@ MakeCode でこのリポジトリを編集します。
 
 * [https://makecode.microbit.org/](https://makecode.microbit.org/) を開く
 * **読み込む** をクリックし、 **URLから読み込む...** をクリックしてください
-* **https://github.com/kawanami/kagabitiot_receiver20240630** を貼り付けてインポートをクリックしてください
+* **https://github.com/kawanami/kagabitiot_receiver** を貼り付けてインポートをクリックしてください
 
 #### メタデータ (検索、レンダリングに使用)
 
