@@ -19,6 +19,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 // RCモード対応のために受信前の表示を削除してレスポンス向上
 radio.onReceivedString(function (receivedString) {
+    basic.pause(randint(0, 50))
     serial.writeLine(receivedString)
     basic.showIcon(IconNames.Target)
     basic.pause(200)
@@ -39,7 +40,7 @@ input.onButtonPressed(Button.B, function () {
 let pass = ""
 let ssid = ""
 // 無線グループはこちらで設定
-let radio_group = 37
+let radio_group = 56
 // 速度は57600
 serial.redirect(
 SerialPin.P0,
@@ -52,7 +53,7 @@ radio.setFrequencyBand(radio_group % 84)
 // 受信機なので0とする
 radio.setTransmitPower(0)
 // TelloのSSIDを入れる
-ssid = "TELLO-" + "9BF7EB"
+ssid = "TELLO-" + "9ABDF4"
 pass = ""
 basic.showString(ssid.substr(10, 2))
 // 自動接続
